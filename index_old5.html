@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>FlightBrief Web (Editable + Multi-Line RWY/App)</title>
+  <style>
+    body { font-family: sans-serif; margin:0; padding:0; background:#f0f0f0; }
+    nav { display:flex; background:#333; }
+    nav button {
+      flex:1; padding:1em; border:none;
+      color:#fff; background:#333; cursor:pointer;
+    }
+    nav button.active { background:#555; }
+    section { padding:1em; }
+    h2 { margin-top:0; }
+
+    /* Legend */
+    .legend {
+      display: flex;
+      gap: 1em;
+      margin: 1em 0;
+      align-items: center;
+      user-select: none;
+    }
+    .legend div {
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+    .legend .box {
+      width: 1em; height: 1em;
+      border: 1px solid #888;
+    }
+
+    /* Cards */
+    .card {
+      margin-bottom:1em;
+      padding:0.75em;
+      border-radius:4px;
+      background:#fff;
+      position: relative;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .card .edit-btn {
+      position: absolute; top:0.5em; right:0.5em;
+      font-size:0.9em; cursor:pointer;
+      color: rgba(0,0,0,0.4);
+    }
+
+    /* Airport colours */
+    .airport.cat-D  { background: #228B22; color: #fff; }
+    .airport.cat-A1 { background: #7FFF00; color: #000; }
+    .airport.cat-A2 { background: #FFFF00; color: #000; }
+    .airport.cat-CA { background: #FFA500; color: #000; }
+    .airport.cat-EA { background: #FF0000; color: #fff; }
+
+    .border  { background: rgba(0,0,128,0.1); }
+
+    details { margin:0.5em 0; }
+    details summary { cursor: pointer; }
+
+    input, textarea { width:100%; box-sizing:border-box; margin:0.25em 0; }
+    .actions { text-align:right; margin-top:0.5em; }
+    .actions button { margin-left:0.5em; }
+  </style>
+</head>
+<body>
+  <nav>
+    <button id="airports-tab" class="active">Airports</button>
+    <button id="borders-tab">Borders</button>
+  </nav>
+
+  <section id="airports-section">
+    <h2>Airports</h2>
+    <div class="legend">
+      <div data-code="D"><span class="box" style="background:#228B22"></span>D</div>
+      <div data-code="A1"><span class="box" style="background:#7FFF00"></span>A1</div>
+      <div data-code="A2"><span class="box" style="background:#FFFF00"></span>A2</div>
+      <div data-code="CA"><span class="box" style="background:#FFA500"></span>CA</div>
+      <div data-code="EA"><span class="box" style="background:#FF0000"></span>EA</div>
+    </div>
+    <div id="airports-container">Loading…</div>
+  </section>
+
+  <section id="borders-section" style="display:none">
+    <h2>Borders</h2>
+    <div id="borders-container">Loading…</div>
+  </section>
+
+  <script>
+    // Definitions for legend pop-ups
+    const DEFINITIONS = {
+      D:  `Destination Aerodrome (D):
+A destination is an aerodrome served by an Emirates scheduled flight.
+It must be designated as being available for such use in the Operations Specifications.
+
+Note: D/A1/A2/CA are “adequate” aerodromes.`,
+      A1: `Fully Capable Alternate (A1):
+All ground-handling + limited engineering (EK Aerodrome Services).
+Captain release or one-off engineering required.
+
+Note: D/A1/A2/CA are “adequate”.`,
+      A2: `Fuel & Go / Planning Alternate (A2):
+Limited ground/engineering, but can refuel & redispatch with pax onboard.
+
+Note: D/A1/A2/CA are “adequate”.`,
+      CA: `Critical Aerodrome (CA):
+Diversion for ETOPS & drift-down strategies.
+
+Note: D/A1/A2/CA are “adequate”.`,
+      EA: `Emergency Aerodrome (EA):
+Only for dire emergencies where coverage is sparse.`
+    };
+
+    // Clickable legend
+    document.querySelectorAll('.legend div').forEach(el=>{
+      el.onclick = ()=> alert(DEFINITIONS[el.dataset.code]);
+    });
+
+    // Tab switching
+    document.getElementById('airports-tab').onclick = () => toggleTab('airports');
+    document.getElementById('borders-tab').onclick  = () => toggleTab('borders');
+    function toggleTab(tab) {
+      document.getElementById('airports-section').style.display = tab==='airports'? '' : 'none';
+      document.getElementById('borders-section').style.display  = tab==='borders'?  '' : 'none';
+      document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+      document.getElementById(tab+'-tab').classList.add('active');
+    }
+
+    let airportsData, bordersData;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      Promise.all([
+        fetch('airports.json').then(r=>r.json()),
+        fetch('borders_cleaned.json').then(r=>r.json())
+      ])
+      .then(([a,b])=>{
+        airportsData = a;
+        bordersData  = b;
+        renderAirports();
+        renderBorders();
+      })
+      .catch(console.error);
+    });
+
+    // Render airports with multi-line RWY & Approach + edit
+    function renderAirports(){
+      const c = document.getElementById('airports-container');
+      c.innerHTML = '';
+      airportsData
+        .sort((a,b)=> (a.ICAO||'').localeCompare(b.ICAO||'') )
+        .forEach((a,i)=>{
+          const cat = (a['Class/AIRFIELD CAT/RFF']||'D').split('/')[0];
+          const div = document.createElement('div');
+          div.className = `card airport cat-${cat}`;
+
+          // split runways & approach on commas
+          const runways   = (a.Rwy||'–').split(',').map(r=>r.trim()).join('<br/>');
+          const approaches= (a.Approach||'–').split(',').map(x=>x.trim()).join('<br/>');
+
+          div.innerHTML = `
+            <span class="edit-btn" data-index="${i}">✎</span>
+            <details open>
+              <summary><strong>${a.ICAO} — ${a.Name||''}</strong></summary>
+              
+              <details>
+                <summary>Identifiers</summary>
+                IATA: ${a.IATA||'–'}<br/>
+                Elev: ${a.Elevation||'–'}
+              </details>
+
+              <details>
+                <summary>Operational Details</summary>
+                Cat/RFF: ${a['Class/AIRFIELD CAT/RFF']||'–'}<br/>
+                <strong>Runways:</strong><br/>${runways}<br/>
+                <strong>Approach:</strong><br/>${approaches}<br/>
+                CCI: ${a.CCI||'–'}<br/>
+                Ops Hrs: ${a['OPS HRS (ATC/ADMIN)']||'–'}<br/>
+                NOTAM: ${a.NOTAM||'–'}
+              </details>
+            </details>
+          `;
+          c.appendChild(div);
+        });
+
+      c.querySelectorAll('.edit-btn').forEach(btn=>
+        btn.onclick = e => editAirport(+e.target.dataset.index)
+      );
+    }
+
+    function editAirport(idx){
+      const a = airportsData[idx];
+      const form = document.createElement('form');
+      form.innerHTML = `
+        <h3>Edit ${a.ICAO}</h3>
+        <label>ICAO: <input name="ICAO" value="${a.ICAO}"></label>
+        <label>Name: <input name="Name" value="${a.Name||''}"></label>
+        <label>IATA: <input name="IATA" value="${a.IATA||''}"></label>
+        <label>Elevation: <input name="Elevation" value="${a.Elevation||''}"></label>
+        <label>Cat/RFF: <input name="Class/AIRFIELD CAT/RFF" value="${a['Class/AIRFIELD CAT/RFF']||''}"></label>
+        <label>Runways: <textarea name="Rwy">${a.Rwy||''}</textarea></label>
+        <label>Approach: <textarea name="Approach">${a.Approach||''}</textarea></label>
+        <label>CCI: <textarea name="CCI">${a.CCI||''}</textarea></label>
+        <label>Ops Hrs: <input name="OPS HRS (ATC/ADMIN)" value="${a['OPS HRS (ATC/ADMIN)']||''}"></label>
+        <label>NOTAM: <textarea name="NOTAM">${a.NOTAM||''}</textarea></label>
+        <div class="actions">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="submit">Save</button>
+        </div>
+      `;
+      const card = document.querySelectorAll('#airports-container .card')[idx];
+      card.innerHTML = '';
+      card.appendChild(form);
+
+      form.querySelector('#cancel').onclick = ()=> renderAirports();
+      form.onsubmit = ev => {
+        ev.preventDefault();
+        new FormData(form).forEach((v,k)=> a[k]=v);
+        renderAirports();
+      };
+    }
+
+    // Render & edit borders
+    function renderBorders(){
+      const c = document.getElementById('borders-container');
+      c.innerHTML = '';
+      bordersData.forEach((b,i)=>{
+        const div = document.createElement('div');
+        div.className='card border';
+        div.innerHTML=`
+          <span class="edit-btn" data-index="${i}">✎</span>
+          <details open>
+            <summary><strong>${b.waypoint}</strong></summary>
+            <details><summary>FIR</summary>${b.fir}</details>
+            <details>
+              <summary>Notes</summary>
+              <strong>Requirement:</strong> ${b.notes.requirement}<br/>
+              <strong>Frequency:</strong><br/>${b.notes.frequency.replace(/\n/g,'<br/>')}
+              ${b.notes.other
+                ? `<br/><strong>Other:</strong><br/>${b.notes.other.replace(/\n/g,'<br/>')}`
+                : ''}
+            </details>
+          </details>
+        `;
+        c.appendChild(div);
+      });
+      c.querySelectorAll('.edit-btn').forEach(btn=>
+        btn.onclick = e => editBorder(+e.target.dataset.index)
+      );
+    }
+
+    function editBorder(idx){
+      const b = bordersData[idx];
+      const form = document.createElement('form');
+      form.innerHTML=`
+        <h3>Edit ${b.waypoint}</h3>
+        <label>Waypoint: <input name="waypoint" value="${b.waypoint}"></label>
+        <label>FIR: <input name="fir" value="${b.fir}"></label>
+        <label>Requirement: <textarea name="notes.requirement">${b.notes.requirement}</textarea></label>
+        <label>Frequency: <textarea name="notes.frequency">${b.notes.frequency}</textarea></label>
+        <label>Other: <textarea name="notes.other">${b.notes.other||''}</textarea></label>
+        <div class="actions">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="submit">Save</button>
+        </div>`;
+      const card = document.querySelectorAll('#borders-container .card')[idx];
+      card.innerHTML=''; card.appendChild(form);
+
+      form.querySelector('#cancel').onclick = ()=> renderBorders();
+      form.onsubmit = ev=>{
+        ev.preventDefault();
+        const data = new FormData(form);
+        b.waypoint           = data.get('waypoint');
+        b.fir                = data.get('fir');
+        b.notes.requirement  = data.get('notes.requirement');
+        b.notes.frequency    = data.get('notes.frequency');
+        b.notes.other        = data.get('notes.other');
+        renderBorders();
+      };
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>FlightBrief Web (Editable)</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; }
+    nav { display: flex; background: #333; }
+    nav button {
+      flex: 1; padding: 1em; border: none;
+      color: #fff; background: #333; cursor: pointer;
+    }
+    nav button.active { background: #555; }
+
+    section { padding: 1em; }
+
+    .card {
+      margin-bottom: 1em;
+      padding: 0.75em;
+      border-radius: 4px;
+      position: relative;
+    }
+    .card .edit-btn {
+      position: absolute;
+      top: 0.5em; right: 0.5em;
+      font-size: 0.9em; cursor: pointer;
+    }
+
+    /* exact colours from legend */
+    .airport.cat-D  { background: #2E7D3233; }  /* deep green @20% */
+    .airport.cat-A1 { background: #9CCC6533; }  /* light green @20% */
+    .airport.cat-A2 { background: #FFEB3B33; }  /* yellow @20% */
+    .airport.cat-CA { background: #FF980033; }  /* orange @20% */
+    .airport.cat-EA { background: #F4433633; }  /* red @20% */
+
+    .border { background: rgba(0,0,128,0.1); }
+
+    h2 { margin-top: 0; }
+
+    details { margin: 0.5em 0; }
+
+    input, textarea { width: 100%; box-sizing: border-box; margin: 0.25em 0; }
+
+    .actions { text-align: right; margin-top: 0.5em; }
+    .actions button { margin-left: 0.5em; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button id="airports-tab" class="active">Airports</button>
+    <button id="borders-tab">Borders</button>
+  </nav>
+
+  <section id="airports-section">
+    <h2>Airports</h2>
+    <div id="airports-container">Loading…</div>
+  </section>
+
+  <section id="borders-section" style="display:none">
+    <h2>Borders</h2>
+    <div id="borders-container">Loading…</div>
+  </section>
+
+  <script>
+    // Tab switching
+    document.getElementById('airports-tab').onclick = ()=> toggleTab('airports');
+    document.getElementById('borders-tab').onclick  = ()=> toggleTab('borders');
+    function toggleTab(tab) {
+      document.getElementById('airports-section').style.display = tab==='airports'? '':'none';
+      document.getElementById('borders-section').style.display  = tab==='borders'? '':'none';
+      document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+      document.getElementById(tab+'-tab').classList.add('active');
+    }
+
+    let airportsData, bordersData;
+
+    // Load both JSON files
+    window.addEventListener('DOMContentLoaded', ()=>{
+      Promise.all([
+        fetch('airports.json').then(r=>r.json()),
+        fetch('borders_cleaned.json').then(r=>r.json())
+      ]).then(([a,b])=>{
+        airportsData = a;
+        bordersData  = b;
+        renderAirports();
+        renderBorders();
+      }).catch(console.error);
+    });
+
+    // RENDER AIRPORTS
+    function renderAirports(){
+      const c = document.getElementById('airports-container');
+      c.innerHTML = '';
+      airportsData
+        .sort((a,b) => (a.ICAO||'').localeCompare(b.ICAO||''))
+        .forEach((a,i)=>{
+          // preserve any \n in your JSON fields:
+          const runways = (a.Rwy||'–')
+            .split(/\r?\n/).map(s=>s.trim()).join('<br/>');
+          const approaches = (a.Approach||'–')
+            .split(/\r?\n/).map(s=>s.trim()).join('<br/>');
+          const cci = (a.CCI||'–')
+            .split(/\r?\n/).map(s=>s.trim()).join('<br/>');
+
+          // classification code is before first "/"
+          const code = (a['Class/AIRFIELD CAT/RFF']||'D').split('/')[0].trim();
+
+          const div = document.createElement('div');
+          div.className = `card airport cat-${code}`;
+          div.innerHTML = `
+            <span class="edit-btn" data-index="${i}">✎ Edit</span>
+            <details open>
+              <summary><strong>${a.ICAO} — ${a.Name||''}</strong></summary>
+              <div>
+                <details><summary>Identifiers</summary>
+                  IATA: ${a.IATA||'–'}<br/>
+                  Elevation: ${a.Elevation||'–'}
+                </details>
+                <details><summary>Operational Details</summary>
+                  Category/RFF: ${a['Class/AIRFIELD CAT/RFF']||'–'}<br/>
+                  <strong>Runways:</strong><br/>${runways}<br/>
+                  <strong>Approaches:</strong><br/>${approaches}<br/>
+                  <strong>CCI:</strong><br/>${cci}<br/>
+                  Ops Hrs: ${a['OPS HRS (ATC/ADMIN)']||'–'}<br/>
+                  NOTAM: ${a.NOTAM||'–'}
+                </details>
+                <details><summary>Weather</summary>
+                  METAR: ${a.latestMetar||'–'}<br/>
+                  TAF:   ${a.latestTaf||'–'}
+                </details>
+              </div>
+            </details>
+          `;
+          c.appendChild(div);
+        });
+
+      // wire up edit buttons again:
+      document.querySelectorAll('#airports-container .edit-btn')
+        .forEach(btn=> btn.onclick = e => editAirport(+e.target.dataset.index));
+    }
+
+    function editAirport(idx){
+      const a = airportsData[idx];
+      const form = document.createElement('form');
+      form.innerHTML = `
+        <h3>Edit ${a.ICAO}</h3>
+        <label>ICAO      <input name="ICAO" value="${a.ICAO}"></label>
+        <label>Name      <input name="Name" value="${a.Name||''}"></label>
+        <label>IATA      <input name="IATA" value="${a.IATA||''}"></label>
+        <label>Elevation <input name="Elevation" value="${a.Elevation||''}"></label>
+        <label>Category/RFF <input name="Class/AIRFIELD CAT/RFF" value="${a['Class/AIRFIELD CAT/RFF']||''}"></label>
+        <label>Runways   <textarea name="Rwy">${a.Rwy||''}</textarea></label>
+        <label>Approach  <textarea name="Approach">${a.Approach||''}</textarea></label>
+        <label>CCI       <textarea name="CCI">${a.CCI||''}</textarea></label>
+        <label>Ops Hrs   <input name="OPS HRS (ATC/ADMIN)" value="${a['OPS HRS (ATC/ADMIN)']||''}"></label>
+        <label>NOTAM     <textarea name="NOTAM">${a.NOTAM||''}</textarea></label>
+        <div class="actions">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="submit">Save</button>
+        </div>
+      `;
+      const card = document.querySelectorAll('#airports-container .card')[idx];
+      card.innerHTML = '';
+      card.appendChild(form);
+
+      form.querySelector('#cancel').onclick = ()=> renderAirports();
+
+      form.onsubmit = ev => {
+        ev.preventDefault();
+        const data = new FormData(form);
+        data.forEach((v,k)=> a[k]=v);
+        renderAirports();
+      };
+    }
+
+    // RENDER BORDERS
+    function renderBorders(){
+      const c = document.getElementById('borders-container');
+      c.innerHTML = '';
+      bordersData.forEach((b,i)=>{
+        const div = document.createElement('div');
+        div.className='card border';
+        div.innerHTML=`
+          <span class="edit-btn" data-index="${i}">✎ Edit</span>
+          <details open>
+            <summary><strong>${b.waypoint}</strong></summary>
+            <div>
+              <details><summary>FIR</summary>${b.fir}</details>
+              <details>
+                <summary>Notes</summary>
+                <strong>Requirement:</strong> ${b.notes.requirement}<br/>
+                <strong>Frequency:</strong><br/>${b.notes.frequency.replace(/\n/g,'<br/>')}
+                ${b.notes.other? `<br/><strong>Other:</strong><br/>${b.notes.other.replace(/\n/g,'<br/>')}` : ''}
+              </details>
+            </div>
+          </details>`;
+        c.appendChild(div);
+      });
+
+      document.querySelectorAll('#borders-container .edit-btn')
+        .forEach(btn=> btn.onclick = e => editBorder(+e.target.dataset.index));
+    }
+
+    function editBorder(idx){
+      const b = bordersData[idx];
+      const form = document.createElement('form');
+      form.innerHTML=`
+        <h3>Edit ${b.waypoint}</h3>
+        <label>Waypoint    <input name="waypoint" value="${b.waypoint}"></label>
+        <label>FIR         <input name="fir"      value="${b.fir}"></label>
+        <label>Requirement <textarea name="notes.requirement">${b.notes.requirement}</textarea></label>
+        <label>Frequency   <textarea name="notes.frequency">${b.notes.frequency}</textarea></label>
+        <label>Other (opt) <textarea name="notes.other">${b.notes.other||''}</textarea></label>
+        <div class="actions">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="submit">Save</button>
+        </div>`;
+      const card = document.querySelectorAll('#borders-container .card')[idx];
+      card.innerHTML=''; card.appendChild(form);
+
+      form.querySelector('#cancel').onclick = ()=> renderBorders();
+
+      form.onsubmit = ev=>{
+        ev.preventDefault();
+        const data = new FormData(form);
+        b.waypoint            = data.get('waypoint');
+        b.fir                 = data.get('fir');
+        b.notes.requirement   = data.get('notes.requirement');
+        b.notes.frequency     = data.get('notes.frequency');
+        b.notes.other         = data.get('notes.other');
+        renderBorders();
+      };
+    }
+
+  </script>
+</body>
+</html>

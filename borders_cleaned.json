@@ -1,0 +1,686 @@
+[
+  {
+    "waypoint": "IMKAD",
+    "fir": "OMAN(MUSCAT) TO YEMEN (SANA\u2019A)",
+    "notes": {
+      "requirement": "At least 10min prior to entering Sana'a FIR, aircraft shall contact Sana'a ACC",
+      "frequency": "East Sector from other than Mumbai FIRs\u200b Sana'a Control\u200b 132.200; \nif unable: 125.700\u200b Sana'a Radio\u200b\nHJ: 11300, 10018 or 13288\u200b\nHN: 11300, 5517 or 7595\u200b\nWest Sector\u200b Sana'a Control\u200b 125.700\u200b\nFrom Mogadishu FIR/UIR on B535\u200b Sana'a Control\u200b 132.200; \nif unable: Aden APP 119.700 at\u200b least 10min prior to TORBA",
+      "other": "Area\u200b SATCOM numbers\u200b\nFor West Sect or:\u200b\n+967 1598 996\u200b\n+967 1435 873\u200b\nFor East Sect or:\u200b \n+967 1598 995\u200b\n+967 1435 872\u200b\nNO SLOP INFO"
+    }
+  },
+  {
+    "waypoint": "DEMGO",
+    "fir": "YEMEN (SANA\u2019A) TO SOMALIA (MOGADISHU)",
+    "notes": {
+      "requirement": "Aircraft are required t o con tact Mogadishu ACC at least 10min prior to the estimated time over t he\u200b en try point of the Mogadishu FIR; \u200b\nAircraft unable to make position reports\u200b direct to Mogadishu ACC shall request ground\u200b stations or\u200b other aircraft to relay the information\nIn case of VHF communication failure at Mogadishu ACC, all\u200b aircraft with the capability of Satellite\u200b communication are requested to contact Mogadishu ACC on SATCOM when transiting Mogadishu FIR.",
+      "frequency": "Frequencies Mogadishu ACC North \u200b\nVHF\u200b H24\u200b Primary\u200b 132.500\u200b\nHF\u200b Secondary\u200b 11300\u200b\nSecondary\u200b 13288\u200b\nSecondary\u200b 5517\u200b\nSecondary\u200b 3467\nCPDLC HCSM",
+      "other": "transiting \u200b through the \u200bMogadishu \u200bFIR RVSM airspace and \u200b take appropriate action to ensure safety off light \u200b by maintaining continuous listening watch on VHF emergency frequency 121.500 and IFBP frequency 126.900/127.450 at all times.\u200b\nAt and above F L245 Mogadishu F IR is Class A airspace\nMogadishu\u200b SLOP applied\u200b F L290-F L410\u200b Interpilot FREQ to coordinate offset: 123.450/127.450\nFlight In format ion Services Somalia\u200b\nTEL:\u200b\t\t+252 185 3675\u200b\n\t\t+252 185 3676\u200b\n\t\t+252 185 7394"
+    }
+  },
+  {
+    "waypoint": "AXAPO/ARSHI",
+    "fir": "SOMALIA (MOGADISHU) TO ETHIOPIA (ADDIS ABABA)",
+    "notes": {
+      "requirement": "Aircraft are required to contact Addis Ababa ACC at least 10min prior prior entering FIR\nADS-B",
+      "frequency": "Addis Ababa FIR\u200b\nAddis Center\u200b\n125.200 North PRI\u200b/ 125.100 South\n11300/5517 SRY",
+      "other": "NO SLOP INFO\nPilots must strictly comply to t he IATA IF BP and maintain a continuous listening watch on the FREQs: \u200b\n-\u200b VHF: 126.900, 125.100, 125.200; and/or\u200b\n-\u200b HF: 11300 (HJ), 5517 (HN)\u200b\nThe estimated time over the entry points of the Addis Ababa FIR and the ETA over the relevant exit\u200b point of the Addis Ababa FIR must be included in the last position report to t he competent adjacent\u200b ACC/FIC."
+    }
+  },
+  {
+    "waypoint": "BRO",
+    "fir": "ETHIOPIA (ADDIS ABABA) TO SOUTH SUDAN (KHARTOUM)",
+    "notes": {
+      "requirement": "SCB KFOSS See Attachment",
+      "frequency": "Khartoum Center VHF 124.700/ HF 8959/13288\nKhartoum Center South VHF 125.700/ 127.300\nCPDLC HSSS",
+      "other": "SLOP is applied in t he in the KFOSS Region. \nPilots must strictly comply to the IATA IFBP and maintain a continuous listening watch on the FREQs: \u200b\nVHF: 126.900"
+    }
+  },
+  {
+    "waypoint": "RUDOL",
+    "fir": "ETHIOPIA (ADDIS ABABA) TO KENYA (NAIROBI)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "Nairobi Center \n118.500\nNairobi Control North \nVHF 121.300/128.700\nHF 5517/11300\nCPDLC HKNA",
+      "other": "SLOP not authorized"
+    }
+  },
+  {
+    "waypoint": "PATAR",
+    "fir": "KENYA (NAIROBI) TO UGANDA (ENTEBBE)",
+    "notes": {
+      "requirement": "Con tact ACC at least 10min prior t o entering Entebbe FIR \u200b\nAdditionally, pilots\u200b shall confirm with Khartoum, Juba or Kinshasa ACC whether their\u200b estimates have been \u200breported to Entebbe ACC.",
+      "frequency": "En tebbe ACC: VHF 128.500\nHF 11300\nGulu Tower: VHF 123.700",
+      "other": "Entebbe SLOP applied\u200b at or above FL150\u200b Interpilot FREQ to coordinate offset: 123.450\nPilots must strictly comply to  he IATA IFBP and maintain a continuous listening watch on the FREQs: \u200b\nVHF: 126.900"
+    }
+  },
+  {
+    "waypoint": "NALOS",
+    "fir": "UGANDA (ENTEBBE) TO KINSHASA (DEMOCRATIC REPUBLIC OF THE CONGO)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "Kinshasa Control\nVHF 126.100\nKinshasa Info\nVHF 123.700\nCPDLC FZZA",
+      "other": "NO SLOP INFO\nPilots must strictly comply to the IATA IFBP and maintain a continuous listening watch on the FREQ VHF 126.900"
+    }
+  },
+  {
+    "waypoint": "BATVU",
+    "fir": "KINSHASA (DEMOCRATIC REPUBLIC OF THE CONGO) TO BRAZZAVILLE (REPUBLIC OF CONGO)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "Brazzaville Control\nVHF 127.100/128.900\nKinshasa Info\nVHF 123.700\nHF 5493/6559\nBrazzaville Info\nVHF 118.700/121.100/128.900\nHF 2878/5703/8924\nCPDLC FCCC",
+      "other": "NO SLOP INFO\nPilots must strictly comply to the IATA IFBP and maintain a continuous listening watch on the FREQs: \u200b\nVHF: 126.900"
+    }
+  },
+  {
+    "waypoint": "ARKOS",
+    "fir": "BRAZZAVILLE (REPUBLIC OF CONGO) TO GHANA (ACCRA)",
+    "notes": {
+      "requirement": "If unable t o CTC Accra on 130.900, call\u200b on 8903 or log on t o DGAC ADS-C/CPDLC\u200b at least 10min\u200b bef ore F IR BDRY.\u200b\nWestbound T FC t o Accra F IR Ocean ic\u200b BDRY",
+      "frequency": "Accra Control\nVHF 130.900\nCPDLC DGAC",
+      "other": "SLOP is applied in t he ocean ic airspace of t he Accra F IR (AORRA)\nPilots may apply an offset out bound at the oceanic entry point and must return to centerline\u200b prior to\u200b the oceanic exit point.\nACFT transiting\u200b radar controlled airspace mid-ocean should remain on their already established offset\u200b positions."
+    }
+  },
+  {
+    "waypoint": "S08 48.0 W003 00.0",
+    "fir": "GHANA (ACCRA) TO IVORY COAST (ABIJAN)TO ANGOLA (LUANDA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "Abijan Info VHF 129.100/HF 5680 \nCPDLC DIII\nDakar Oceanic/Control 127.300/129.500\nLuanda Info HF 2851/2854\u2026\nCPDLC FNAN",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "S1300.0 W010 00.0",
+    "fir": "ANGOLA (LUANDA) TO BRASIL (ATLANTICO SBAO)",
+    "notes": {
+      "requirement": "Posit ion report ing is required at entry/exit gate as well as any other posit ion required by ATC:\u200b\n10\u00b0E, 0\u00b0E/W, 10\u00b0W, 20\u00b0W, 30\u00b0W, 40\u00b0W, 50\u00b0W",
+      "frequency": "CPDLC SBAO",
+      "other": "HF communication is required over large parts of the South Atlantic. The normal radiotelephone language in\u200b South America is Spanish. The ATC controller often works on several frequencies at a time and therefore a\u200b reply to a message may not be provided instantly. Especially in South America all ATC controllers should be\u200b dealt with carefully. ATC is not always according to ICAO standard.\nAtlantico FIR does not require an HF SELCAL check after logon unless requested.\nIf any equipment is not operating normally, the pilot should notify ATC before entering the AORRA\u200b airspace."
+    }
+  },
+  {
+    "waypoint": "UMREP",
+    "fir": "BRASIL (ATLANTICO SBAO) TO BRAZIL (CURITIBA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "Curitiba Center VHF 135.700\nSector 7 VHF 133.400/ 133.600",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "Waypoint",
+    "fir": "FIR",
+    "notes": {
+      "requirement": "Special Requirement",
+      "frequency": "Frequency/CPDLC",
+      "other": "Others"
+    }
+  },
+  {
+    "waypoint": "KITAL/LOTAV/REXOD/TOTOX/PARAR",
+    "fir": "OMAN(MUSCAT) TO INDIA (MUMBAI)",
+    "notes": {
+      "requirement": "10 MIN PRIOR ENTRY CONTACT MUMBAI ON CPDLC",
+      "frequency": "VABF AND MUMBAI RADIO HF 8879/6661 HZ",
+      "other": "VHF SET 123.45 LATER MUMBAI OCIANIC 135.75 MHZ"
+    }
+  },
+  {
+    "waypoint": "GIDIL",
+    "fir": "IRAN (TEHRAN)",
+    "notes": {
+      "requirement": "5 MIN PRIOR ENTRY CONTACT IRAN AIR DEFENCE",
+      "frequency": "135.10 MHz / 127.80 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "IMLOT",
+    "fir": "UAE TO IRAN (TEHRAN)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "120.30 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "GOKSO",
+    "fir": "TEHRAN",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "123.90 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "ASVIB",
+    "fir": "IRAN (TEHRAN) TO PAKISTAN (KARACHI)",
+    "notes": {
+      "requirement": "15 MIN PRIOR ENTRY CONTACT KARACHI",
+      "frequency": "128.35 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "IDEBA",
+    "fir": "LAHORE",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "123.15 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "MERUN\nALI",
+    "fir": "DELHI \nDELHI",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "124.55MHz / VIDF\n120.90 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "LKN\nPPT",
+    "fir": "KOLKATA\nKOLKATA",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "127.525 MHz / VECF\n133.750 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "TEBID",
+    "fir": "INDIA (K0LKATA) TO BANGLADESH (DHAKA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "125.700 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "AAT",
+    "fir": "INDIA (KOLKATA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "125.775 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "ANSOS",
+    "fir": "INDIA (KOLKATA) TO MYANMAR (YANGON)",
+    "notes": {
+      "requirement": "TRY TO CALL YANGON PRIOR ENTRY ESTABLISH CPDLC",
+      "frequency": "126.750 MHz / VYYF",
+      "other": "SLOP IN YANGON AIRSPACE"
+    }
+  },
+  {
+    "waypoint": "LSO",
+    "fir": "MYANMAR (YANGON) TO CHINA (KUNMING)",
+    "notes": {
+      "requirement": "TRY TO CALL KMG AT THIS POINT FOR IDENTIFICATION",
+      "frequency": "132.175 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "LINSO\n\nMAKUL\nMEPAN\nDUDIT\nATLAT\nIGIVI\nAGRAV",
+    "fir": "MYANMAR (YANGON) TO CHINA (KUNMING)\nCHINA (KUNMING)\nCHINA (NANNING)\nCHINA (NANNING)\nCHINA (GUANGZHOU)\nCHINA (GUANGZHOU)\nCHINA (GUANGZHOU)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "132.175 MHz \n\n125.750 MHz\n133.100 MHz\n128.375 MHz\n132.650 MHz\n121.600 MHz\n125.350 MHz",
+      "other": "WITHIN 100 NM OF CN AIRSPACE WEAR HEADSET EXPECT OFFSET"
+    }
+  },
+  {
+    "waypoint": "SIERA",
+    "fir": "CHINA (GUANGZHOU) TO HONG KONG S.A.R.",
+    "notes": {
+      "requirement": "CALL HKG MIN 5 MIN TO SIKOU WITH LVL/SQ/ATIS",
+      "frequency": "127.550 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "ALPOB",
+    "fir": "UAE (UAE) TO BAHRAIN (BAHRAIN)",
+    "notes": {
+      "requirement": "BE LEVEL BEFORE RAMKI- IF UNABLE, ADVICE ATC",
+      "frequency": "TUMAK                         \nBAHRAIN 132.150 MHZ\nBOPOV\nBAHRAIN 127.525 MHZ\nORSOL\nBAHRAIN 127.575 MHZ\n\nEGNIM\nBAHRAIN 125.30 MHZ / 124.30 MHZ\nMOGAS/EGLIT\nBAHRAIN 126.70 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "ITEVO/DAVUS",
+    "fir": "BAHRAIN (BAHRAIN) TO KUWAIT (KUWAIT)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "ITEVO/DAVUS\nKUWAIT 125.30 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "RALKA/TASMI",
+    "fir": "KUWAIT (KUWAIT) TO BAGHDAD (IRAQ)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "RALKA/TASMI\nBAGHDAD 127.100 MHZ/ 128.700 MHZ\nTASMI\nBAGHDAD 123.0 MHZ/ 128.700 MHZ\nSEPTU\nBAGHDAD 125.90 MHZ/ 132.875 MHZ\nVUSEB\nBAGHDAD 132.875 MHZ/ 125.900 MHZ",
+      "other": "OMC 12.3.7.8.1\nOverflight of Iraq/Baghdad FIR\nApproved Routes\nPlanned via L718, UM860, UM688 or published DCTs. Separation from the restricted areas will be ensured by ATC.\nMinimum Flight Level\nFL300 except during climb or descent.\nContingencies\nIn the event FL300 is not achieved due to ATC constraints, flight may enter the airspace and every effort shall be made to reach the minimum FL as soon as practicable.\nIn an emergency that requires immediate decision, the pilot-in-command, in the interest of safety, may deviate from these requirements to the extent required by that emergency."
+    }
+  },
+  {
+    "waypoint": "NINVA",
+    "fir": "BAGHDAD (IRAQ) TO TURKEY (ANKARA)",
+    "notes": {
+      "requirement": "SYRIA STAY NORTH OF LTAF R084",
+      "frequency": "NINVA\nANKARA 127.925 MHZ/132.90 MHZ\nSRT/TALIL\nANKARA 129.300 MHZ\nNELPO\nANKARA 133.550 MHZ\nESOSU\nANKARA 128.650 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "NEGEM",
+    "fir": "TURKEY (ANKARA) TO BULGARIA (SOFIA)",
+    "notes": {
+      "requirement": "2 MIN PROIR ENTRY LOGON LBSR",
+      "frequency": "NEGEM \nSOFIA 128.055 MHZ\n\nSOFIA 133.630 MHZ\nCPDLC LRBB",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "OSTOV",
+    "fir": "BULGARIA (SOFIA)TO \nROMANIA (BUCHAREST)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "Bucharest 123.265 MHZ\nBucharest 133.630 MHZ\nARGES\nBucharest 123.650 MHZ\nBucharest 134.380 MHZ\nBucharest 134.460 MHZ\nCPDLC LRBB",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "BUDOP",
+    "fir": "ROMANIA (BUCHAREST) TO HUNGARY (BUDAPEST)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "BUDOP\nBudapest 132.790 MHZ\nTEGRI\nBudapest 132.790 MHZ\nBudapest 125.305 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "ITEVO",
+    "fir": "BAHRAIN (BAHRAIN) TO SAUDI ARABIA (JEDDAH)",
+    "notes": {
+      "requirement": "RNAV 5 REQUIRED",
+      "frequency": "ULADA\n\nRIYADH 132.500 MHZ\n\nRIYADH 132.950 MHZ\n\nRIYADH 134.800 MHZ\n\nCPDLC OEJN (JEDDAH)\nCPDLC OERK (RIYADH)",
+      "other": "Jeddah ACC (Trial)\u200b \n>F\ufeffL150\u200b OEJN\u200b -\u200bYES\u200b -\u200bFANS 1/A\u200b\nand\u200b FANS 1/A+ \u200b\nRiyadh ACC (Trial) \u200b \n>F\ufeffL150\u200b OERK-\u200bYES\u200b -\u200b FANS 1/A\u200b\nand\u200b FANS 1/A+"
+    }
+  },
+  {
+    "waypoint": "KITOT",
+    "fir": "SAUDI ARABIA (JEDDAH) TO EGYPT(CAIRO)",
+    "notes": {
+      "requirement": "RNAV 5 REQUIRED\nEn\ufefftering Cairo F\ufeffIR\u200b\na)\u200b Traf\ufefff\ufeffic en\ufefftering Cairo F\ufeffIR must con\ufefftact Cairo ACC at least 5min prior t\ufeffo en\ufefftry poin\ufefft.\u200b\nb)\u200b Traf\ufefff\ufeffic en\ufefftering Cairo F\ufeffIR must switch on transponder at least 15min prior t\ufeffo en\ufefftry poin\ufefft.\u200b\nc)\u200b Traf\ufefff\ufeffic en\ufefftering Cairo F\ufeffIR from Tripoli F\ufeffIR\u200b shall con\ufefftact Cairo ACC on HF FREQ or any AVBL means\u200b\n20min bef\ufeffore reaching LOSUL or DITA",
+      "frequency": "KITOT\nCAIRO 126.600 MHZ\n\nCAIRO 124.700 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "LAKTOT",
+    "fir": "EGYPT(CAIRO) TO CYPRUS (NICOSIA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "LAKTO\nNICOSIA 127.075MHZ\nCPDLC LCCC",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "OTHON",
+    "fir": "CYPRUS (NICOSIA) TO GREECE (ATHENS)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "OTHON\nATHENA 127.975 MHZ\n\nATHENA 133.325 MHZ\nMES\nMACEDONIA 133.880 MHZ\nTSL\nMACEDONIA 129.675 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "DISOR",
+    "fir": "MACEDONIA (SKOPJE) TO \nKFOR TO \nSERBIA (BELGRADE)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "DISOR \nSKOPJE 136.425 MHZ\nLONTA\nKFOR RADAR 126.765\nDOLEV\nBELGRADE 123.775 MHZ\n\nCPDLC LYBA",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "NOVLO",
+    "fir": "SERBIA (BELGRADE) TO CROATIA (ZAGREB)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "IRDIV\nZAGREB 130.215 MHZ\n\nCPDLC LDZO",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "PODET",
+    "fir": "CROATIA (ZAGREB) TO SLOVENIA (LJUBLJANA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "PODET\nLJUBLJANA 130.235 MHZ\n\nCPDLC LJLA",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "DIPSA",
+    "fir": "SLOVENIA (LJUBLJANA) TO AUSTRIA (VIENNA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "DIPSA\nVIENNA 129.200 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "GABKO",
+    "fir": "UAE (UAE) TO IRAN (TEHRAN)",
+    "notes": {
+      "requirement": "CONTACT TEHRAN RADAR AIR DEFENCE EARLIEST POSSIBLE FOR IDENTIFICATION BEFORE ENTERING IRANIAN AIRSPACE ON 127.800 MHZ OR 135.100 MHZ",
+      "frequency": "GABKO\nTEHRAN 120.300 MHZ\nGETIS\nTEHRAN 132.750 MHZ\nSOGOT\nTEHRAN 120.700 MHZ\nDASEL\nTEHRAN 132.500 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "ULDUS",
+    "fir": "IRAN (TEHRAN) TO AZERBAIJAN (BAKU)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "ULDUS\nBAKU 133.100 MHZ\nNETON\nBAKU W. 133.700 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "VETEN",
+    "fir": "AZERBAIJAN (BAKU) TO ARMENIA (YERIVAN)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "VETEN\nYERIVAN 127.600 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "INDUR",
+    "fir": "ARMENIA (YERIVAN) TO ANKARA (TURKEY)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "INDUR\nANKARA 122.275 MHZ\nBAMLA\nANKARA 133.550 MHZ\nADUMU\nANKARA 128.650 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "ODERO",
+    "fir": "ANKARA (TURKEY) TO BULGARIA (SOFIA)",
+    "notes": {
+      "requirement": "2 MIN PROIR ENTRY LOGON LBSR",
+      "frequency": "ODERO \n128.055 MHZ\nCPDLC LRBB",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "LUGEB",
+    "fir": "BULGARIA (SOFIA) TO \nROMANIA (BUCHAREST)",
+    "notes": {
+      "requirement": "10 MIN PROIR ENTRY LOGON LBSR",
+      "frequency": "LUGEB\nBUCHAREST 123.065 MHZ\nBUCHAREST 133.630 MHZ\nDOLEV\nBELGRADE 123.775 MHZ\n\nCPDLC LRBB",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "MOPUG",
+    "fir": "ROMANIA (BUCHAREST) TO HUNGARY (BUDAPEST)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "MOPUG\nBUDAPEST 132.790 MHZ\nBUDAPEST 135.205 MHZ\nBUDAPEST 133.535 MHZ\nBUDAPEST 128.105 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "SUNIS",
+    "fir": "HUNGARY (BUDAPEST) TO AUSTRIA (VIENNA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "SUNIS\nVIENNA 132.600 MHZ\nVIENNA 132.950 MHz",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "SOMAD",
+    "fir": "IRAN (TEHRAN) TO TURKMENISTAN (TURKMENBASHI)",
+    "notes": {
+      "requirement": "ACFT CREWS ENTERING TURKMENISTAN AIRSPACE FROM AIRSPACE OF AFGANISTAN AND IRAN SHALL ESTABLISH COMMUNICATION WITH TURKMENISTAN ATC UNITS AT 81-108NM BEFORE CROSSING FIR BOUNDARY",
+      "frequency": "SOMAD\nTURKMENBASHI\n130.000 MHZ/ 135.800 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "RUTIL",
+    "fir": "AZERBAIJAN (BAKU) TO KAZAKHSTAN (AKTOBE)",
+    "notes": {
+      "requirement": "AIRCRAFT SHALL CROSS THE STATE BORDER THROUGH THE DESIGNATED TRANSIT CORRIDORS, UNLESS OTHERWISE AGREED WITH NEIGHBOURING STATES\nIN CASE OF DIFFERENCE IN THE SEPARATION SYSTEMS ADOPTED IN KAZAKHSTAN AND NEIGHBOURING STATES, THE ACFT SHALL REACH AND MAINTAIN AN APPROPRIATE FL 30KM BEFORE ENTERING THE AIRSPACE OF REPUBLIC OF KAZAKHSTAN, UNLESS OTHERWISE ESTABLISHED BY AGREEMENTS BETWEEN ATC",
+      "frequency": "RUTIL\nAKTOBE 126.400 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "KERUL",
+    "fir": "TURKMENISTAN (TURKMENBASHI) TO KAZAKHSTAN (AKTOBE)",
+    "notes": {
+      "requirement": "AIRCRAFT SHALL CROSS THE STATE BORDER THROUGH THE DESIGNATED TRANSIT CORRIDORS, UNLESS OTHERWISE AGREED WITH NEIGHBOURING STATES\nIN CASE OF DIFFERENCE IN THE SEPARATION SYSTEMS ADOPTED IN KAZAKHSTAN AND NEIGHBOURING STATES, THE ACFT SHALL REACH AND MAINTAIN AN APPROPRIATE FL 30KM BEFORE ENTERING THE AIRSPACE OF REPUBLIC OF KAZAKHSTAN, UNLESS OTHERWISE ESTABLISHED BY AGREEMENTS BETWEEN ATC",
+      "frequency": "KERUL\nAKTOBE 126.400 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "POMNI",
+    "fir": "KAZAKHSTAN (AKTOBE) TO SAMARA (RUSSIA)",
+    "notes": {
+      "requirement": "THE FLIGHT CREW MUST REPORT ITS FLIGHT NUMBER (RADIOTELEPHONE CALL SIGN, STATE AND REGISTRATION IDENTIFICATION SIGNS), POSITION, FLIGHT LEVEL (ALTITUDE) OF FLIGHT AND THE ESTIMATED TIME OF CROSSING THE STATE BORDER OF THE RUSSIAN FEDERATION TO THE APPROPRIATE ATSU AT LEAST 10 MIN BEFORE CROSSING THE STATE BORDER OF THE RUSSIAN FEDERATION\nMINIMUM FLIHT LEVEL IS FL260 EXEPT FOR FLIGHTS TO AND FROM RUSSIAN DESTINATIONS",
+      "frequency": "POMNII\nSAMARA 129.000 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "TARDI",
+    "fir": "MUSCAT",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "CONTACT MUSCAT ACC \nentering FIR via MEMTU, LABRI, TARDI, RETAS and MIGDU on 124.7",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "KITAL",
+    "fir": "MUMBAI",
+    "notes": {
+      "requirement": "Contact FIC 10 min prior to entering Indian ADIZ.",
+      "frequency": "Frequencies \nMumbai ACC  \n120.500, 125.35, \n132.700, 133.300 \n133.425, 133.850 \n\nMumbai Oceanic 135.750 \n\nHF RADAR 6655 \nHF OCEANIC 8909 8948 \nMUMBAI \nSATCOM 441901 \n\nCPDLC VABF",
+      "other": "SLOP authorized with prior ATC approval. \n\nAircraft logged on to ADS-C do not need to give position reports on CPDLC or HF/ VHF outside TMAs, except at the boundary points. \n\nSELCAL check is required to verify HF connectivity"
+    }
+  },
+  {
+    "waypoint": "BIBGO",
+    "fir": "MALE",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "Frequencies \nMALE N SECTOR \n123.900 \n\nMALE RADIO \nHF 6544  \n\nCPDLC VMRF",
+      "other": "SLOP may be applied outside Male TMA. \n\nWX deviations without ATC clearance are different from ICAO, see CRAR \n3.116.9.1.2"
+    }
+  },
+  {
+    "waypoint": "AKDOB",
+    "fir": "COLOMBO",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "COLOMBO radar \nVHF 124.900, 126.000 \n\nCOLOMBO HF \n3470/5670/11285\n/13318 \n\nCOLOMBO \nSATCOM \n441702/441701 \n\nCPDLC VCCF",
+      "other": "SLOP is applied in the non-radar oceanic airspace of the Colombo FIR. \n\nWX or other deviations without ATC clearance are different from ICAO, see CRAR \n3.168.12.1.2"
+    }
+  },
+  {
+    "waypoint": "NISOK",
+    "fir": "JAKARTA",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "JAKARTA CTL BANDA ACEH\n128.300, 132.200\n\n\n\n\n\n\n\n\n\nCPDLC WIII",
+      "other": "T\ufeffhe aircraf\ufefft is t\ufeffo reach t\ufeffhe f\ufefflight level last assigned by t\ufeffhe responsible ACC at least 10min bef\ufeffore\u200b en\ufefftering t\ufeffhe Jakarta F\ufeffIR and Ujung Pandang F\ufeffIR or as ot\ufeffherwise instructed by t\ufeffhe ATC un\ufeffit in\u200b accordance wit\ufeffh t\ufeffhe OCA wit\ufeffhin Jakarta ACC and Ujung Pandang ACC;\u200b\nPilots should include in t\ufeffheir last posit\ufeffion report prior t\ufeffo en\ufefftering t\ufeffhe Jakarta F\ufeffIR and Ujung\u200b Pandang F\ufeffIR, t\ufeffhe est\ufeffimated t\ufeffime over t\ufeffhe en\ufefftry poin\ufefft of t\ufeffhe Jakarta F\ufeffIR and Ujung Pandang F\ufeffIR\u200b and t\ufeffhe est\ufeffimated t\ufeffime of arrival over t\ufeffhe relevan\ufefft exit poin\ufefft of t\ufeffhe Jakarta F\ufeffIR and Ujung\u200b Pandang F\ufeffIR;\u200b\nPilots should con\ufefftact t\ufeffhe next adjacen\ufefft ACC as soon as possible, and n\ufeffo later t\ufeffhan 10min bef\ufeffore\u200b t\ufeffhe est\ufeffimated t\ufeffime of arrival over t\ufeffhe relevan\ufefft exit poin\ufefft of Jakarta F\ufeffIR or Ujung Pandang F\ufeffIR;"
+    }
+  },
+  {
+    "waypoint": "SAPDA/APOVU",
+    "fir": "MELBOURNE",
+    "notes": {
+      "requirement": "RNP10 minimum required and RNP4 for ATS routes. \n\nBlock level clearance is cancelled or amended by the issuing of a new vertical clearance. \nRESUME  ROUTING is NOT the same as DIRECT TO. \n\nWX DEVIATION is  NOT the same as LATERAL OFFSET",
+      "frequency": "AIR-TO-AIR 123.450 \n\nBRISBANE \nHF \n3476//5634/8879 /13306/17961 \n\nMELBOURNE \nSATCOM 450303 \n\nCPDLC YMMM",
+      "other": "SLOP authorized with prior ATC approval. \n\nOn entering the YMMM, YBBB, AGGG or ANAU FIR from another ATSU pilots must send a single CPDLC position report."
+    }
+  },
+  {
+    "waypoint": "LEGAN",
+    "fir": "AUCKLAND OCANIC",
+    "notes": {
+      "requirement": "Perf\ufefformance-based Commun\ufefficat\ufeffion and Surveillance (PBCS) is applied in t\ufeffhe Auckland Ocean\ufeffic F\ufeffIR f\ufeffor t\ufeffhe\u200b applicat\ufeffion of reduced perf\ufefformance based separat\ufeffion standards. \u200b\nRequiremen\ufeffts\u200b\nT\ufeffo be \u200beligible \u200bf\ufeffor PBCS, all ACF\ufeffT must be equipped wit\ufeffh FANS 1/A and \u200b achieve RCP 240 and RSP 180\u200b standards. \u200b FANS 1/A\u200b aircraf\ufefft n\ufeffot\u200b meet\ufeffing RCP 240 or RSP 180 may operate CPDLC and ADS-C in t\ufeffhe\u200b\nAuckland Ocean\ufeffic F\ufeffIR but will n\ufeffot be eligible f\ufeffor PBCS. \u200b\nT\ufeffhe f\ufefflight crew must n\ufeffot\ufeffify ATC whenever t\ufeffhe aircraf\ufefft is n\ufeffot PBCS complian\ufefft due t\ufeffo equipmen\ufefft failure. Aircraf\ufefft operat\ufeffing wit\ufeffhout SATCOM in t\ufeffhe Auckland Ocean\ufeffic F\ufeffIR do n\ufeffot meet RCP 240 or RSP 180.",
+      "frequency": "AIR-TO-AIR 123.450 \n\nAUKLAND RADIO\n5726, 9032, 11256\n\n\n\n\n\n\nCPDLC NZZO",
+      "other": "SLOP is applied in t\ufeffhe Auckland Ocean\ufeffic \n\nF\ufeffor ACF\ufeffT equipped wit\ufeffh t\ufeffhe capacity t\ufeffo of\ufefffset in ten\ufefft\ufeffhs of a naut\ufeffical mile randomly choose cen\ufeffterline or an\u200b\nof\ufefffset posit\ufeffion of 0.1NM up t\ufeffo a maximum of 2NM t\ufeffo t\ufeffhe right of track.\n\nWhen on uncharted (random) routes, ACF\ufeffT shall report posit\ufeffion at in\ufefftervals of 5\u00b0 or 10\u00b0 of LAT f\ufeffor\u200b predominan\ufefft\ufeffly n\ufeffort\ufeffh-sout\ufeffh or LONG f\ufeffor predominan\ufefft\ufeffly east-west tracks. If t\ufeffhe ACF\ufeffT traverses 10\u00b0 in\u200b 80min or less, 10\u00b0 shall be used. \u200b ACF\ufeffT on diagonal \u200b tracks shall \u200b report at in\ufefftervals n\ufeffot \u200b exceeding\u200b 80min.\u200b\n\u2022\u200b F\ufeffor ACF\ufeffT f\ufefflying on company generated uncharted routes (user preferred random route), all waypoin\ufeffts\u200b published f\ufeffor t\ufeffhese routes are compulsory report\ufeffing poin\ufeffts except where t\ufeffhese waypoin\ufeffts coincide\u200b\nwit\ufeffh published n\ufeffon-compulsory report\ufeffing poin\ufeffts or waypoin\ufeffts on an ATS route."
+    }
+  },
+  {
+    "waypoint": "GUTAN",
+    "fir": "KAZAKHSTAN (AKTOBE) TO  RUSSIA (SAMARA)",
+    "notes": {
+      "requirement": "THE FLIGHT CREW MUST REPORT ITS FLIGHT NUMBER (RADIOTELEPHONE CALL SIGN, STATE AND REGISTRATION IDENTIFICATION SIGNS), POSITION, FLIGHT LEVEL (ALTITUDE) OF FLIGHT AND THE ESTIMATED TIME OF CROSSING THE STATE BORDER OF THE RUSSIAN FEDERATION TO THE APPROPRIATE ATSU AT LEAST 10 MIN BEFORE CROSSING THE STATE BORDER OF THE RUSSIAN FEDERATION\nMINIMUM FLIHT LEVEL IS FL260 EXEPT FOR FLIGHTS TO AND FROM RUSSIAN DESTINATIONS",
+      "frequency": "GUTAN\nSAMARA 129.000 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "NURKA",
+    "fir": "SAMARA (RUSSIA) TO YEKATERINBURG (RUSSIA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "NURKA\nURAL 128.500 MHZ/ 129.000 MHZ/ 132.200 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "LOZAN",
+    "fir": "YEKATERINBURG (RUSSIA) TO ST. PETERSBURG (RUSSIA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "LOZAN\nPETERBURG 128.500 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "NIRUT",
+    "fir": "ST. PETERSBURG (RUSSIA) NO FIR",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "NIRUT\nPETERBURG 128.500 MHZ/ AIR TO AIR 123.450 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "N80E030",
+    "fir": "ENTER BOD\u00d8 (NORWAY)",
+    "notes": {
+      "requirement": "OCR is implemented in all Oceanic airspaces except for Shanwick FIR. In these airspaces no Oceanic clearance will be issued. Instead, CPDLC\nloadable route clearance uplinks will be used by ATC for any necessary route changes. RCL and other NAT HLA procedures remain unchanged\nFor additional information, refer to Lido Route Manual, LIDO GEN, RSI 2.3.5.1.1 \"SpecialEmphasis Items for NAT Oceanic Clearance Removal\".",
+      "frequency": "BOD\u00d8 OCEANIC CTL 123.175 MHZ/ 127.7725 MHZ\nCPDLC ENOB",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "N84E000",
+    "fir": "BOD\u00d8 (NORWAY) TO REYKJAVIK (ISLAND)",
+    "notes": {
+      "requirement": "OCR is implemented in all Oceanic airspaces except for Shanwick FIR. In these airspaces no Oceanic clearance will be issued. Instead, CPDLC\nloadable route clearance uplinks will be used by ATC for any necessary route changes. RCL and other NAT HLA procedures remain unchanged\nFor additional information, refer to Lido Route Manual, LIDO GEN, RSI 2.3.5.1.1 \"SpecialEmphasis Items for NAT Oceanic Clearance Removal\".",
+      "frequency": "ICELAND RADIO 127.850 MHZ\nCPDLC BIRD",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "N84E000 - N79W070",
+    "fir": "REYKJAVIK (ISLAND) + NUUK (GREENLAND)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "CPDLC BGGL",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "N75W080",
+    "fir": "REYKJAVIK (ISLAND) + NUUK (GREENLAND) TO EDMONTON (CANADA)",
+    "notes": {
+      "requirement": "Gander Radio (Cambridge Bay) will relay Communication to Anchorage for enroute Aircraft beyond the Range of Alaska VHF Com Network",
+      "frequency": "EDMONTON POND INLET 133.950 MHZ \nCPDLC CZEG",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "YYQ",
+    "fir": "EDMONTON (CANADA) TO WINNEPEG (CANADA)",
+    "notes": {
+      "requirement": "Whenever practicable 126.700 MHZ should be monitored in uncontrolled Airspace.",
+      "frequency": "EDMONTON CTR CURCHILL 123.900 MHZ/ WINNIPEG CTR 134.600 MHZ\nCPDLC CZEG",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "ISN",
+    "fir": "WINNEPEG (CANADA) TO SALT LAKE CITY (USA)",
+    "notes": {
+      "requirement": "nan",
+      "frequency": "MINNEAPOLIS CTR MINOT 127.600 MHZ/ SALT LAKE CITY MILES 132.425 MHZ\nCPDLC KUSA",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "ULADA",
+    "fir": "BAHRAIN (BAHRAIN) TO SAUDI ARABIA (JEDDAH)",
+    "notes": {
+      "requirement": "RNAV 5 REQUIRED",
+      "frequency": "ULADA\n\nRIYADH 132.500 MHZ\n\nRIYADH 132.950 MHZ\n\nRIYADH 134.800 MHZ\n\nCPDLC OEJN (JEDDAH)\nCPDLC OERK (RIYADH)",
+      "other": "Jeddah ACC (Trial)\u200b \n>F L150\u200b OEJN\u200b -\u200bYES\u200b -\u200bFANS 1/A\u200b and\u200b FANS 1/A+ \u200b\n\nRiyadh ACC (Trial) \u200b \n>F L150\u200b OERK-\u200bYES\u200b -\u200b FANS 1/A\u200b and\u200b FANS 1/A+"
+    }
+  },
+  {
+    "waypoint": "KABAN",
+    "fir": "BAGHDAD (IRAQ) TO TURKEY (ANKARA)",
+    "notes": {
+      "requirement": "SYRIA STAY NORTH OF LTAF R084",
+      "frequency": "KABAN\nANKARA 127.925 MHZ/132.90 MHZ",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "APOVU",
+    "fir": "MELBOURNE",
+    "notes": {
+      "requirement": "RNP10 minimum required and RNP4 for ATS routes. \n\nBlock level clearance is cancelled or amended by the issuing of a new vertical clearance. \nRESUME  ROUTING is NOT the same as DIRECT TO. \n\nWX DEVIATION is  NOT the same as LATERAL OFFSET",
+      "frequency": "AIR-TO-AIR 123.450 \n\nBRISBANE \nHF \n3476//5634/8879 /13306/17961 \n\nMELBOURNE \nSATCOM 450303 \n\nCPDLC YMMM",
+      "other": "SLOP authorized with prior ATC approval. \n\nOn entering the YMMM, YBBB, AGGG or ANAU FIR from another ATSU pilots must send a single CPDLC position report."
+    }
+  },
+  {
+    "waypoint": "SUNAN",
+    "fir": "MALE TO COLOMBO",
+    "notes": {
+      "requirement": "ENTRY CONTACT COLOMBO ON CPDLC",
+      "frequency": "VCCF",
+      "other": "nan"
+    }
+  },
+  {
+    "waypoint": "SABEK/DADAR/APOVU/KADAP",
+    "fir": "MALE/COLOMBO TO MELBOURNE",
+    "notes": {
+      "requirement": "ENTRY CONTACT MELBOURNE ON CPDLC",
+      "frequency": "YMMM AND BRISBANE RADIO 13306/17961 HZ",
+      "other": "Once over the Waypoint send position report via CPDLC"
+    }
+  }
+]
